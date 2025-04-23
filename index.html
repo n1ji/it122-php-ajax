@@ -4,26 +4,52 @@
   <meta charset="UTF-8" />
   <title>AJAX with PHP</title>
   <style>
-    /* CSS to hide the quote container initially and apply fade-in animation */
-    #quoteContainer {
-            display: none;
-        }
+    body {
+      color: white;
+      background-color: darkslategray;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    #quote-container {
+      display: none;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 10px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    #new-quote-btn {
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    
+    .fade-in {
+      animation: fadeIn 1s ease;
+    }
 
-        /* CSS for the fade-in animation */
-        .fade-in {
-            animation: fadeIn 1s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-</style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Raleway:wght@400&family=Playfair+Display:wght@400&family=Poppins:wght@400&family=Merriweather:wght@400&family=Dancing+Script:wght@400&family=Pacifico&family=Caveat:wght@400&family=Abril+Fatface&display=swap">
 </head>
 <body>
-  <h1>AJAX Test</h1>
-  <button id="fetchData">Fetch Data</button>
-  <div id="result"></div>
+  <h1>Random Quote Generator</h1>
+  <div id="quote-container"></div>
+  <button id="new-quote-btn" onclick="getRandomQuote()">Get New Quote</button>
 
   <script src="script.js"></script>
 </body>
