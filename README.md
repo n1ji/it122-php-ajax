@@ -1,3 +1,4 @@
+<img src="screenshot.png"></img>
 # php-ajax-codespace
 A starter repo for building a PHP enabled CodeSpace
 This is a simple setup for running PHP with AJAX inside GitHub Codespaces.
